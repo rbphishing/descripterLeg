@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Legenda</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(to right, white, #ccc);
+            color:black;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        textarea, input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            color: black;
+        }
+        textarea::placeholder, input::placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+        textarea {
+            resize: none;
+        }
+        button {
+            padding: 12px 20px;
+            cursor: pointer;
+            background: #fff;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background: #fff;
+            color: black;
+            transform: scale(1.1);
+        }
+        h2, h3 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Gerador de Legenda para TikTok e Instagram</h2>
+    
+    <label for="descricao">Descreva o conteúdo do seu post:</label>
+    <textarea id="descricao" rows="4" placeholder="Digite aqui..."></textarea>
+    
+    <label for="palavras-chave">Palavras-chave (separadas por vírgula):</label>
+    <input type="text" id="palavras-chave" placeholder="ex: tecnologia, inovação, futuro">
+    
+    <button onclick="gerarLegenda()">Gerar Legenda</button>
+    
+    <h3>Legenda Gerada:</h3>
+    <p id="legenda"></p>
+</body>
+</html>
